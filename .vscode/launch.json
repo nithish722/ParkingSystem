@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launcher",
+            "request": "launch",
+            "mainClass": "com.crisscross.Launcher",
+            "projectName": "crisscross-parking"
+        },
+        {
+            "type": "java",
+            "name": "Launch CrissCross (MainApp)",
+            "request": "launch",
+            "mainClass": "com.crisscross.Launcher",
+            "projectName": "crisscross-parking"
+        }
+    ]
+}

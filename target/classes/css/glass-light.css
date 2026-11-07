@@ -1,0 +1,692 @@
+/* ========================================================
+   CrissCross - Cyber Emerald & Electric Royal Blue (Light Theme)
+   Warm Golden Amber (#E8B86D) & Vibrant Coral Rose (#F16E68)
+   Frosted Ice Glassmorphism with Luminous Ambient Accents
+   ======================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: 
+        /* Light crisp frosted base */
+        linear-gradient(from 0% 0% to 100% 100%, #F0FDF4 0%, #EFF6FF 42%, #EEF2FF 78%, #F8FAFC 100%),
+        /* Top-Left: Soft Emerald Glow */
+        radial-gradient(center 14% 12%, radius 55%, rgba(232, 184, 109, 0.22), transparent 75%),
+        /* Top-Right: Soft Electric Royal Blue Glow */
+        radial-gradient(center 86% 20%, radius 60%, rgba(241, 110, 104, 0.18), transparent 75%),
+        /* Bottom-Left: Mint Bloom */
+        radial-gradient(center 35% 65%, radius 65%, rgba(232, 184, 109, 0.16), transparent 75%),
+        /* Bottom-Right: Sky-Blue Depth */
+        radial-gradient(center 88% 90%, radius 65%, rgba(241, 110, 104, 0.20), transparent 70%);
+    -fx-text-fill: #0F172A;
+}
+
+/* Gradient Utility Classes (Warm Golden Amber #E8B86D to Vibrant Coral Rose #F16E68) */
+.bg-gradient-full,
+.gradient-bg {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+}
+
+.bg-gradient-horizontal {
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+}
+
+.bg-gradient-vertical {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+}
+
+.bg-gradient-card,
+.card-gradient,
+.gradient-card {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+    -fx-background-radius: 24px;
+}
+
+/* Base Glass Card - Ultra-Transparent Frosted Glass */
+.glass-card {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, rgba(255, 255, 255, 0.85) 0%, rgba(240, 249, 255, 0.65) 100%);
+    -fx-background-radius: 24px;
+    -fx-border-color: rgba(255, 255, 255, 0.95) rgba(232, 184, 109, 0.35) rgba(241, 110, 104, 0.25) rgba(255, 255, 255, 0.90);
+    -fx-border-radius: 24px;
+    -fx-border-width: 1px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.10), 26, 0.10, 0, 8);
+}
+
+.glass-card-interactive {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, rgba(255, 255, 255, 0.75) 0%, rgba(240, 249, 255, 0.50) 100%);
+    -fx-background-radius: 22px;
+    -fx-border-color: rgba(255, 255, 255, 0.90) rgba(232, 184, 109, 0.25) rgba(241, 110, 104, 0.20) rgba(255, 255, 255, 0.85);
+    -fx-border-radius: 22px;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.08), 18, 0.08, 0, 5);
+}
+
+.glass-card-interactive:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 242, 254, 0.75) 100%);
+    -fx-border-color: rgba(255, 255, 255, 1.0) rgba(232, 184, 109, 0.65) rgba(241, 110, 104, 0.40) rgba(255, 255, 255, 0.95);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(232, 184, 109, 0.25), 24, 0.18, 0, 7);
+}
+
+.glass-card-highlight {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, rgba(255, 255, 255, 0.90) 0%, rgba(220, 252, 231, 0.65) 50%, rgba(224, 242, 254, 0.55) 100%);
+    -fx-background-radius: 24px;
+    -fx-border-color: rgba(255, 255, 255, 0.98) rgba(232, 184, 109, 0.65) rgba(241, 110, 104, 0.35) rgba(255, 255, 255, 0.92);
+    -fx-border-radius: 24px;
+    -fx-border-width: 1.2px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(232, 184, 109, 0.20), 24, 0.14, 0, 6);
+}
+
+/* Glass Header / Topbar */
+.glass-header {
+    -fx-background-color: rgba(255, 255, 255, 0.65);
+    -fx-border-color: transparent transparent rgba(226, 232, 240, 0.85) transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 12px 28px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.06), 16, 0.08, 0, 4);
+}
+
+/* Glass Top Horizontal Navigation Bar */
+.glass-topnav {
+    -fx-background-color: rgba(255, 255, 255, 0.55);
+    -fx-border-color: rgba(255, 255, 255, 0.85) transparent rgba(232, 184, 109, 0.30) transparent;
+    -fx-border-width: 1px 0 1px 0;
+    -fx-padding: 6px 20px;
+}
+
+/* Dynamic Liquid Glass Follower Pill - Golden Amber & Coral Rose Glow (#E8B86D to #F16E68) */
+.liquid-dock-pill {
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+    -fx-background-radius: 16px;
+    -fx-border-color: rgba(255, 255, 255, 0.95) rgba(232, 184, 109, 0.80) rgba(241, 110, 104, 0.70) rgba(255, 255, 255, 0.85);
+    -fx-border-radius: 16px;
+    -fx-border-width: 1.2px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.45), 16, 0.20, 0, 3);
+}
+
+/* Top Nav Buttons (Horizontal Bar) */
+.top-nav-button {
+    -fx-background-color: rgba(255, 255, 255, 0.50);
+    -fx-border-color: rgba(226, 232, 240, 0.80);
+    -fx-border-width: 1px;
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER;
+    -fx-padding: 7px 14px;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-cursor: hand;
+}
+
+.top-nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-border-color: rgba(232, 184, 109, 0.60);
+    -fx-text-fill: #EA580C;
+}
+
+.top-nav-button-active {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.95) rgba(232, 184, 109, 0.80) rgba(241, 110, 104, 0.55) rgba(255, 255, 255, 0.85);
+    -fx-border-width: 1px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 7px 14px;
+}
+
+/* Dock ScrollPane Suppression */
+.dock-scroll-wrapper,
+.dock-scroll-wrapper .viewport {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.dock-scroll-wrapper .scroll-bar:horizontal,
+.dock-scroll-wrapper .scroll-bar:vertical {
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+    -fx-min-width: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+.dock-scroll-wrapper .scroll-bar .thumb,
+.dock-scroll-wrapper .scroll-bar .track,
+.dock-scroll-wrapper .scroll-bar .increment-button,
+.dock-scroll-wrapper .scroll-bar .decrement-button {
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+    -fx-min-width: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* Glass Sidebar */
+.glass-sidebar {
+    -fx-background-color: rgba(255, 255, 255, 0.70);
+    -fx-border-color: transparent rgba(226, 232, 240, 0.80) transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+    -fx-padding: 24px 16px;
+}
+
+/* Sidebar Nav Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 18px;
+    -fx-background-radius: 14px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(232, 184, 109, 0.16);
+    -fx-text-fill: #EA580C;
+}
+
+.nav-button-active {
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, rgba(232, 184, 109, 0.28), rgba(241, 110, 104, 0.20));
+    -fx-border-color: rgba(232, 184, 109, 0.60);
+    -fx-border-width: 1px;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-text-fill: #EA580C;
+    -fx-font-weight: 800;
+    -fx-padding: 12px 18px;
+}
+
+/* Primary Glass Buttons */
+.button-primary {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 800;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;
+    -fx-padding: 11px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.40), 16, 0.25, 0, 5);
+}
+
+.button-primary:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #F0C47E 0%, #F8AE78 50%, #FF7E78 100%);
+    -fx-effect: dropshadow(gaussian, rgba(232, 184, 109, 0.60), 20, 0.3, 0, 7);
+}
+
+.button-secondary {
+    -fx-background-color: rgba(255, 255, 255, 0.90);
+    -fx-border-color: rgba(203, 213, 225, 0.95);
+    -fx-border-radius: 20px;
+    -fx-border-width: 1.2px;
+    -fx-text-fill: #EA580C;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 22px;
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E8B86D;
+    -fx-text-fill: #F97316;
+    -fx-effect: dropshadow(gaussian, rgba(232, 184, 109, 0.25), 14, 0.15, 0, 3);
+}
+
+.button-accent {
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #F16E68, #E8B86D);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 800;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 22px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.35), 14, 0.2, 0, 4);
+}
+
+.button-accent:hover {
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #FF7E78, #F0C47E);
+}
+
+.button-danger {
+    -fx-background-color: rgba(239, 68, 68, 0.12);
+    -fx-border-color: rgba(239, 68, 68, 0.4);
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: 700;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 22px;
+    -fx-cursor: hand;
+}
+
+.button-danger:hover {
+    -fx-background-color: rgba(239, 68, 68, 0.22);
+}
+
+/* Inputs & Form Controls */
+.text-field, .password-field, .combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.90);
+    -fx-background-radius: 16px;
+    -fx-border-color: rgba(203, 213, 225, 0.90);
+    -fx-border-radius: 16px;
+    -fx-border-width: 1.3px;
+    -fx-text-fill: #0F172A;
+    -fx-prompt-text-fill: #94A3B8;
+    -fx-font-size: 14px;
+    -fx-padding: 12px 16px;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #EA580C;
+    -fx-border-width: 1.6px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.25), 14, 0.2, 0, 3);
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #0F172A;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(255, 255, 255, 0.98);
+    -fx-border-color: rgba(203, 213, 225, 0.90);
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-padding: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.15), 20, 0.15, 0, 6);
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(232, 184, 109, 0.20);
+    -fx-text-fill: #EA580C;
+}
+
+/* Typography */
+.heading-hero {
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0F172A;
+}
+
+.heading-1 {
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0F172A;
+}
+
+.heading-2 {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1E293B;
+}
+
+.text-subtle {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 13px;
+}
+
+.text-accent {
+    -fx-text-fill: #00A63E;
+    -fx-font-weight: bold;
+}
+
+.text-highlight {
+    -fx-text-fill: #EA580C;
+    -fx-font-weight: 700;
+}
+
+/* Status Badges */
+.badge-available {
+    -fx-background-color: rgba(232, 184, 109, 0.20);
+    -fx-border-color: rgba(232, 184, 109, 0.60);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #047857;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 12px;
+}
+
+.badge-occupied {
+    -fx-background-color: rgba(239, 68, 68, 0.15);
+    -fx-border-color: rgba(239, 68, 68, 0.45);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #b91c1c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 12px;
+}
+
+.badge-reserved {
+    -fx-background-color: rgba(245, 158, 11, 0.18);
+    -fx-border-color: rgba(245, 158, 11, 0.55);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #b45309;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 12px;
+}
+
+.badge-blocked {
+    -fx-background-color: rgba(148, 163, 184, 0.22);
+    -fx-border-color: rgba(148, 163, 184, 0.45);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #475569;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 12px;
+}
+
+/* Modern Glass TableView */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.80);
+    -fx-background-radius: 18px;
+    -fx-border-color: rgba(226, 232, 240, 0.90);
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(241, 245, 249, 0.90);
+    -fx-background-radius: 18px 18px 0 0;
+    -fx-padding: 8px 4px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EA580C;
+    -fx-border-color: transparent;
+    -fx-padding: 8px 12px;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(226, 232, 240, 0.6) transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-text-fill: #0F172A;
+    -fx-padding: 6px 12px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: rgba(248, 250, 252, 0.60);
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: rgba(232, 184, 109, 0.12);
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: rgba(241, 110, 104, 0.18);
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #0F172A;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(241, 110, 104, 0.25);
+    -fx-background-radius: 8px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(241, 110, 104, 0.55);
+}
+
+/* Parking Slot Buttons */
+.slot-btn {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+    -fx-min-width: 82px;
+    -fx-min-height: 64px;
+}
+
+.slot-btn-available {
+    -fx-background-color: rgba(220, 252, 231, 0.85);
+    -fx-border-color: rgba(232, 184, 109, 0.75);
+    -fx-text-fill: #047857;
+}
+
+.slot-btn-available:hover {
+    -fx-background-color: #bbf7d0;
+    -fx-border-color: #E8B86D;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.4), 14, 0.25, 0, 3);
+}
+
+.slot-btn-selected {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+    -fx-border-color: #EA580C;
+    -fx-border-width: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.55), 18, 0.35, 0, 4);
+}
+
+.slot-btn-occupied {
+    -fx-background-color: rgba(254, 226, 226, 0.75);
+    -fx-border-color: rgba(239, 68, 68, 0.45);
+    -fx-text-fill: #b91c1c;
+    -fx-cursor: default;
+    -fx-opacity: 0.85;
+}
+
+.slot-btn-reserved {
+    -fx-background-color: rgba(254, 243, 199, 0.8);
+    -fx-border-color: rgba(245, 158, 11, 0.5);
+    -fx-text-fill: #b45309;
+    -fx-cursor: default;
+    -fx-opacity: 0.88;
+}
+
+.slot-btn-blocked {
+    -fx-background-color: rgba(241, 245, 249, 0.75);
+    -fx-border-color: rgba(148, 163, 184, 0.45);
+    -fx-text-fill: #475569;
+    -fx-cursor: default;
+    -fx-opacity: 0.7;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    -fx-background-color: rgba(15, 23, 42, 0.50);
+}
+
+.modal-dialog {
+    -fx-background-color: rgba(255, 255, 255, 0.98);
+    -fx-background-radius: 26px;
+    -fx-border-color: rgba(226, 232, 240, 0.95);
+    -fx-border-radius: 26px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.15), 35, 0.3, 0, 15);
+}
+
+/* Modal Form Labels & Text Readability */
+.modal-dialog .label,
+.modal-dialog Label,
+.modal-form-label {
+    -fx-text-fill: #0F172A;
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+}
+
+.modal-form-sublabel {
+    -fx-text-fill: #475569;
+    -fx-font-size: 11.5px;
+    -fx-font-weight: 500;
+}
+
+/* Translucent Mist Glass Modal (Dedicated for Add/Edit Slot Port - Light Theme) */
+.modal-overlay-mist {
+    -fx-background-color: radial-gradient(center 50% 45%, radius 70%, rgba(226, 232, 240, 0.55) 0%, rgba(148, 163, 184, 0.65) 100%);
+}
+
+.modal-dialog-mist {
+    -fx-background-color: 
+        linear-gradient(from 0% 0% to 100% 100%, 
+            rgba(255, 255, 255, 0.92) 0%, 
+            rgba(241, 245, 249, 0.86) 100%);
+    -fx-background-radius: 28px;
+    -fx-border-color: rgba(255, 255, 255, 0.95) rgba(232, 184, 109, 0.50) rgba(241, 110, 104, 0.40) rgba(255, 255, 255, 0.90);
+    -fx-border-radius: 28px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 30px 34px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.18), 35, 0.20, 0, 12);
+}
+
+.modal-mist-badge {
+    -fx-background-color: rgba(232, 184, 109, 0.12);
+    -fx-background-radius: 999px;
+    -fx-border-color: rgba(232, 184, 109, 0.50);
+    -fx-border-radius: 999px;
+    -fx-border-width: 1px;
+    -fx-padding: 4px 12px;
+    -fx-text-fill: #059669;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+
+.modal-mist-divider {
+    -fx-background-color: linear-gradient(to right, transparent, rgba(232, 184, 109, 0.50), rgba(241, 110, 104, 0.40), transparent);
+    -fx-pref-height: 1.5px;
+    -fx-max-height: 1.5px;
+}
+
+/* ========================================================
+   2D Architectural Parking Blueprint / Floor Plan
+   ======================================================== */
+.floorplan-board {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #070916 0%, #0E122C 50%, #060814 100%);
+    -fx-background-radius: 22px;
+    -fx-border-color: rgba(232, 184, 109, 0.35);
+    -fx-border-radius: 22px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 26, 0.12, 0, 8);
+}
+
+.floorplan-road-lane {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: transparent transparent rgba(232, 184, 109, 0.25) transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-style: segments(8, 8);
+    -fx-padding: 6px 14px;
+}
+
+.floorplan-lane-text {
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-text-fill: rgba(232, 184, 109, 0.75);
+}
+
+.floorplan-spot {
+    -fx-min-width: 50px;
+    -fx-max-width: 50px;
+    -fx-pref-width: 50px;
+    -fx-min-height: 80px;
+    -fx-max-height: 80px;
+    -fx-pref-height: 80px;
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-padding: 4px 2px;
+}
+
+.floorplan-spot-available {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: rgba(232, 184, 109, 0.85);
+    -fx-text-fill: #0F172A;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0.05, 0, 2);
+}
+
+.floorplan-spot-available:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E8B86D;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.40), 12, 0.2, 0, 3);
+}
+
+.floorplan-spot-selected {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #E8B86D 0%, #F2A06A 50%, #F16E68 100%);
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(232, 184, 109, 0.70), 18, 0.35, 0, 4);
+}
+
+.floorplan-spot-occupied {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #dc2626 0%, #b91c1c 100%);
+    -fx-border-color: #ef4444;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: default;
+    -fx-opacity: 0.95;
+}
+
+.floorplan-spot-reserved {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #d97706 0%, #b45309 100%);
+    -fx-border-color: #fbbf24;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: default;
+    -fx-opacity: 0.90;
+}
+
+.floorplan-spot-blocked {
+    -fx-background-color: rgba(100, 116, 139, 0.25);
+    -fx-border-color: rgba(148, 163, 184, 0.35);
+    -fx-border-width: 1px;
+    -fx-text-fill: #94a3b8;
+    -fx-cursor: default;
+    -fx-opacity: 0.60;
+}
+
+.floorplan-popover {
+    -fx-background-color: rgba(255, 255, 255, 0.98);
+    -fx-background-radius: 14px;
+    -fx-border-color: rgba(232, 184, 109, 0.75);
+    -fx-border-radius: 14px;
+    -fx-border-width: 1.2px;
+    -fx-padding: 12px 18px;
+    -fx-effect: dropshadow(gaussian, rgba(241, 110, 104, 0.15), 22, 0.25, 0, 6);
+}
