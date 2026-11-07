@@ -1,0 +1,19 @@
+# Compiled class files and Maven build output
+target/
+*.class
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# OS & IDE temporary files
+.DS_Store
+Thumbs.db
+*.log
+hs_err_pid*
+replay_pid*
